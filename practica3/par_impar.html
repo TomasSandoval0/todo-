@@ -1,0 +1,29 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Par o Impar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="numero" placeholder="Ingresa un número">
+        <button onclick="validarNumero()">Validar</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function validarNumero(){
+            var numero = document.getElementById('numero').value; ///aca se pudo haber usado const ya q no cambiaria el valor de la variable pero var no genera ningun problema en este caso
+            var resultado = document.getElementById('resultado');
+
+            if (numero % 2 === 0) {
+                resultado.textContent = 'El número es par';
+                resultado.className = 'par';
+            } else {
+                resultado.textContent = 'El número es impar';
+                resultado.className = 'impar';
+            }
+        }
+    </script>
+</body>
+</html>

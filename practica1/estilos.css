@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    color: green;
+}
+ul{
+    background-color: yellow;
+}
+.boton{
+    border-radius: 25%;
+  }
+  /* Efecto hover */
+.boton:hover{
+    background-color: #2980b9; /* Un azul más oscuro */
+}

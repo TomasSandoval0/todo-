@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Promedio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Calculadora de Promedio</h1>
+    <input type="text" id="numeros" placeholder="Ingresa números separados por comas">
+    <button onclick="calcularPromedio()">Calcular Promedio</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularPromedio() {
+            // Obtener el valor del input
+            const input = document.getElementById('numeros').value;
+
+            // Separar los números por comas
+            const partes = input.split(',');
+
+            // Convertir las partes a números y calcular suma y cantidad
+            let suma = 0;
+            let cantidad = 0;
+
+            for (let i = 0; i < partes.length; i++) {
+                const numero = parseFloat(partes[i]); // Convertir cada parte a número
+                if (!isNaN(numero)) { // Comprobar si es un número válido
+                    suma += numero; // Sumarlo
+                    cantidad++; // Contar
+                }
+            }
+
+            // Mostrar el promedio si hay números válidos
+            const resultadoDiv = document.getElementById('resultado');
+            if (cantidad > 0) {
+                const promedio = suma / cantidad; // Calcular promedio
+                resultadoDiv.textContent = `El promedio es: ${promedio.toFixed(2)}`;
+            } else {
+                resultadoDiv.textContent = "Por favor, ingresa números válidos.";
+            }
+        }
+    </script>
+</body>
+</html>

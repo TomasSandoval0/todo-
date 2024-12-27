@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <input type="number" id="numero" placeholder="Ingresa un numero">
+    <button oneclick="validarNumero()">Validar</button>
+    <p id="resultado"></p>
+    </div>
+    <script>
+        function validarNumero(){
+            var numero= document.getElementById('numero').value;
+            var resultado= document.getElementById('resultado');
+
+            if(numero%2===0){
+                resultado.textContent= "el numero es par";
+                resultado.className="par";
+            }else{
+                resultado.textContent="el numero es impar";
+                resultado.className="impar";
+            }
+        }
+    </script>
+</body>
+</html>

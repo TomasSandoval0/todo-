@@ -1,0 +1,8 @@
+form{
+    text-align: center;
+    background-color: gray;
+    padding: 50px;
+    border-radius: 25%;
+    border: 1px solid #ccc;
+    width: 300px;
+}
